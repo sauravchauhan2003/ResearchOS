@@ -1,0 +1,1 @@
+"""ResearchOS application configuration."""
