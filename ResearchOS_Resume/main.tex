@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+
+\usepackage[left=0.45in,right=0.45in,top=0.35in,bottom=0.35in]{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\pagestyle{empty}
+
+%---------------- Formatting ----------------%
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+\setlist[itemize]{
+leftmargin=*,
+noitemsep,
+topsep=1pt,
+parsep=0pt,
+partopsep=0pt
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+%---------------- Hyperref ----------------%
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+urlcolor=black,
+citecolor=black,
+pdfborderstyle={/S/U/W 1}
+}
+
+%---------------- Commands ----------------%
+\newcommand{\resumeItem}[1]{\item\small #1}
+
+\newcommand{\resumeSubHeading}[4]{
+\textbf{#1}\hfill\textit{#2}\\
+\textit{#3}\hfill\textit{#4}\\[-2pt]
+}
+
+\newcommand{\resumeSection}[1]{
+\section*{#1}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+\textbf{#1}\hfill\textit{#2}
+}
+
+\begin{document}
+
+%---------------- Header ----------------%
+\begin{center}
+{\LARGE\textbf{Saurav Chauhan}}\\[2pt]
+\href{mailto:sauravchauhan652003@gmail.com}{\underline{sauravchauhan652003@gmail.com}}
+\;|\;
+7030023905
+\;|\;
+Pune, Maharashtra, India\\[2pt]
+\href{https://www.linkedin.com/in/saurav-chauhan-97720225a/}{\underline{LinkedIn}}
+\;|\;
+\href{https://github.com/sauravchauhan2003}{\underline{GitHub}}
+\;|\;
+\href{https://leetcode.com/u/saurav_chauhan2003/}{\underline{LeetCode}}
+\end{center}
+
+%---------------- Education ----------------%
+\resumeSection{Education}
+
+\resumeSubHeading
+{Army Institute of Technology, Pune}{Aug 2023 -- Aug 2027}
+{B.E. in Electronics and Telecommunication}{CGPA: \textbf{8.56/10} (Till Date)}
+
+%---------------- Experience ----------------%
+\resumeSection{Experience}
+
+\resumeSubHeading
+{Software Engineering Intern --- Smart Ways Inc.}{Aug 2025 -- Dec 2025}
+{Flutter • Django • Firebase • MySQL • REST APIs}{}
+
+\begin{itemize}
+\resumeItem{Contributed to the development of two Flutter applications (seller \& customer) with a Django backend, implementing food ordering, JWT + OTP authentication, and REST APIs for orders, menus, and user onboarding.}
+
+\resumeItem{Integrated Firebase (FCM + Firestore) for push notifications, real-time chat, and deep linking; implemented geolocation-based restaurant discovery using Google Maps APIs and Haversine calculations.}
+
+\resumeItem{Developed features for the complete order lifecycle (placement, tracking, status updates, OTP verification) and seller dashboard, supporting menu management, image uploads, and live order tracking while improving operational efficiency.}
+
+\resumeItem{Worked with AWS RDS MySQL for data persistence, implemented secure token validation, and optimized backend APIs to support reliable performance for concurrent users.}
+\end{itemize}
+
+%---------------- Projects ----------------%
+\resumeSection{Projects}
+
+\resumeProjectHeading
+{Textify \hspace{4pt}
+\href{https://github.com/sauravchauhan2003/TextifyBackendRevamped}{\underline{[GitHub]}}}
+{Flutter • Spring Boot • WebSocket • WebRTC}
+
+\begin{itemize}
+\resumeItem{Developed a real-time messaging and video calling app with 1-to-1 chat and encrypted media sharing.}
+\resumeItem{Achieved \textbf{under 50ms latency} and \textbf{99.9\% delivery success rate} in tests with 100+ users.}
+\resumeItem{Implemented JWT-based secure login, local notifications, and offline chat history with Hive.}
+\resumeItem{Streamlined message routing, reducing server load by \textbf{30\%}.}
+\end{itemize}
+
+\resumeProjectHeading
+{StreamFlix \hspace{4pt}
+\href{https://github.com/sauravchauhan2003/StreamflixBackend}{\underline{[GitHub]}}
+\hspace{8pt}
+\href{https://streamflix.proudground-086c2f95.centralindia.azurecontainerapps.io/}{\underline{[Live Demo]}}}
+{Spring Boot • Microservices • Docker • Azure • FFmpeg • HLS}
+
+\begin{itemize}
+\resumeItem{Architected a Netflix-style video streaming platform using Spring Cloud Gateway, Eureka Service Discovery, Auth Service, and Video Service behind an Nginx reverse proxy.}
+
+\resumeItem{Implemented JWT authentication, API Gateway routing, Bucket4j rate limiting, and internal service authentication to secure backend communication and streaming endpoints.}
+
+\resumeItem{Created an HLS video processing pipeline using FFmpeg with adaptive streaming, Azure Blob Storage integration, and persistent storage supporting uploads up to \textbf{100 MB} per video and \textbf{10 MB} per thumbnail.}
+
+\resumeItem{Containerized the application using multi-stage Docker builds with GPU-ready FFmpeg support, optimized JVM startup, and automated deployment on Microsoft Azure.}
+\end{itemize}
+
+\resumeProjectHeading
+{ResearchOS}
+{Python • Streamlit • Multi-Agent AI • ChromaDB • SQLite}
+
+\begin{itemize}
+\resumeItem{Built a chat-first research assistant that routes simple questions to concise answers and complex requests to a coordinated multi-agent workflow for cited research reports, configured for 2 agents by default (up to 6) and 1 review round.}
+\resumeItem{Integrated Groq and Gemini language models with web search and page-reading tools, limiting each task to at most 6 web pages, 4 document chunks, and 3 relevant memories.}
+\resumeItem{Added exponential backoff for transient provider errors and rate limits, with up to 6 retries per request.}
+\resumeItem{Implemented account-scoped conversation history, compact retrieval-augmented memory, and a ChromaDB knowledge library to ground responses in users' prior work and uploaded documents.}
+\resumeItem{Added an agent-selected statistical simulation tool and a live action log so users can inspect research steps and review proposed experiments.}
+\end{itemize}
+
+%---------------- Achievements ----------------%
+\resumeSection{Achievements}
+
+\begin{itemize}
+\resumeItem{Secured \textbf{401st Rank} out of \textbf{39,000+ participants} in \textbf{LeetCode Biweekly Contest 186}.}
+\resumeItem{\textbf{LeetCode - Rated as Knight} (Peak Rating: \textbf{1870})}
+
+\resumeItem{Finalist --- \textbf{Vishwakarma Awards 2024} (Top 18 out of 300+ teams)}
+\resumeItem{Awardee --- \textbf{Prime Minister's Scholarship Scheme (PMSS)}}
+\end{itemize}
+
+\end{document}
